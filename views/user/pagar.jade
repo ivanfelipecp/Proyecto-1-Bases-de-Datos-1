@@ -1,0 +1,11 @@
+extends ../layout.jade
+block content 
+  form(class="top-space" method="post" action="/user/pagar") 
+    div(class="form-group")
+      input(name="recibo" placeholder="Digite el número del recibo" class="form-control medium-input" type="number")
+    div(class="form-group text-center")
+      input(type="submit" class="btn btn-info" value="Pagar")
+  if recibo == 1
+    h1 Se pagó correctamente 
+  else if recibo == -1
+    h1 Ya está pagado o no existe

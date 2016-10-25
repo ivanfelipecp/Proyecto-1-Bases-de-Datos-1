@@ -1,0 +1,78 @@
+html,body{
+	height: 100%;
+	font-family: 'Lato', sans-serif;
+}
+
+img{
+	max-width: 100%;
+}
+
+nav{
+	width: 80%;
+}
+
+.small-image{
+  max-width: 5%;
+}
+
+.nunito{
+	font-family: 'Nunito', sans-serif;
+}
+
+.lato{
+  font-family: 'Lato', sans-serif;
+}
+
+.big{
+	font-size: 4em;
+}
+
+.medium{
+	font-size: 2.5em;
+}
+
+.small{
+	font-size: 12px;
+}
+
+.medium-input{
+  width: 300px;
+}
+
+.dark-blue{
+   color: #111243;
+}
+
+.red{
+	color: #FF0000;
+}
+
+.no-float{
+	float: none !important;
+}
+
+.top-space{
+	margin-top: 100px;
+}
+
+.mini-top-space{
+	margin-top: 50px;
+}
+
+.inline-block{
+	float: none;
+	display: inline-block;
+	margin-right: -4px;
+}
+
+.right-space{
+	margin-right: 1em;
+}
+
+.left-space{
+	margin-left: 1em;
+}
+
+.large-padding{
+	padding: 5px 10px;
+}

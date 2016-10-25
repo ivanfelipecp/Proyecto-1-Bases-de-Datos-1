@@ -1,0 +1,24 @@
+// numero de abonado, nombre y dirección, ordenado por distrito y luego por orden descendente del monto a pagar.
+extends ../layoutAdministrador.jade
+block content 
+  table(class="table top-space" style="width:80%")
+    caption(class="no-float dark-blue center") Reconexión del agua.
+    thead
+      tr
+        th ID de Abonado
+        th Estado del último recibo
+        th Reconectar
+    tbody
+      each reconexion in reconexiones
+        if reconexion.estado == 1
+          tr(class="danger")
+            td= reconexion.idAbonado
+            td No ha pagado el último recibo
+            td
+        else
+          tr(class="success")
+            td= reconexion.idAbonado
+            td Sin deudas
+            td
+              a(href="/admin/reconectar/#{reconexion.idAbonado}" class="dark-blue") Reconectar
+  

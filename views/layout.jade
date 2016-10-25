@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+  head
+    title Pago de Servicios
+    meta(charset="UTF-8")
+    link(rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito")
+    link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,300,700")
+    link(rel="stylesheet" href="/css/main.css")
+  body
+    center 
+      h1(class="medium nunito dark-blue") Pago de Servicios Municipales #[img(src="/images/logo_muni.png" class="small-image")]
+      label Hola #{user.nombre}
+      nav(class="navbar navbar-inverse mini-top-space")
+        div(class="container-fluid")
+          div(class="navbar-header")
+            button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar")
+            a(class="navbar-brand" href="#") Abonado
+          div(class="collapse navbar-collapse" id="myNavBar")
+            ul(class="nav navbar-nav")
+              li 
+                a(href="/user/pendientes") Recibos Pendientes
+              li 
+                a(href="/user/pagados") Recibos Pagados
+              li 
+                a(href="/user/consultar") Consultar Recibo
+              li 
+                a(href="/user/pagar") Pagar Recibo
+                
+              //li(class="dropdown")
+                //a(class="dropdown-toggle" data-toggle="dropdown" href="#")  Mantenimiento #[span(class="caret")]
+                //ul(class="dropdown-menu")
+                  //li
+                    //a(href="#") Insertar
+                    //a(href="#") Modificar
+                    //a(href="#") Borrar
+            ul(class="nav navbar-nav navbar-right")
+              li
+                a(href='/')
+                  span.glyphicon.glyphicon-log-in
+                  |  Salir
+      block content

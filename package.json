@@ -1,0 +1,18 @@
+{
+  "name": "prueba",
+  "version": "1.0.0",
+  "description": "prueba",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ivan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "method-override": "^2.3.6",
+    "mssql": "^3.3.0"
+  }
+}

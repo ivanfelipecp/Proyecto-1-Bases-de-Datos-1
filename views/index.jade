@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+  head
+    title Pago de Servicios
+    meta(charset="UTF-8")
+    link(rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito")
+    link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,300,700")
+    link(rel="stylesheet" href="css/main.css")
+    
+  body
+    center      
+      h1(class="big nunito dark-blue top-space") Pago de Servicios Municipales #[a(href="/admin") #[img(src="images/logo_muni.png" class="small-image" style="cursor:pointer")]]
+      label(class="red")= estado.status
+      form(class="top-space" method="post" action="/user")
+        div(class="form-group")
+          input(name="carnet" placeholder="Digite su carnet" class="form-control medium-input" type="text")
+        div(class="form-group text-center")
+          input(type="submit" class="btn btn-info" value="Ingresar")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js")
+          
+          
+          
+          
+////

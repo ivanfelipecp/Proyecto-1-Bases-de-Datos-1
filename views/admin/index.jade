@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+    title Pago de Servicios
+    meta(charset="UTF-8")
+    link(rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito")
+    link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,300,700")
+    link(rel="stylesheet" href="/css/main.css")
+  body
+    center      
+      h1(class="big nunito dark-blue top-space") Pago de Servicios Municipales #[img(src="/images/logo_muni.png" class="small-image")]
+      h2(class="big nunito dark-blue mini-top-space") Administrador
+      form(class="top-space" method="post" action="/admin") 
+        div(class="form-group")
+          input(name="user" placeholder="Usuario" class="form-control medium-input")
+        div(class="form-group")
+          input(name="password" placeholder="Contraseña" class="form-control medium-input" type="password")
+        div(class="form-group text-center")
+          input(type="submit" class="btn btn-info" value="Ingresar")
+    

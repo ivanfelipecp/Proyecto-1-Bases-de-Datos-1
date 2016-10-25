@@ -1,0 +1,35 @@
+extends ../layoutAdministrador.jade
+block content 
+  if morosos.length < 0
+    h1 Morosos vacio
+  if distritos.length < 0
+    h1 Distritos vacios
+    
+  table(class="table mini-top-space" style="width:80%")
+    caption(class="no-float dark-blue center") Distrito más moroso.
+    thead
+      tr
+        th Nombre
+        th Cantida de recibos morosos
+    tbody
+      tr
+        td= distritos.nombre
+        td= distritos.QAparicionesDistrito
+          
+  table(class="table mini-top-space" style="width:80%")
+    caption(class="no-float dark-blue center") 20 Usuarios con la morosidad más alta.
+    thead
+      tr
+        th Identificación
+        th Nombre
+        th Monto Moroso
+        th Cantida de recibos pendientes
+    tbody
+      - for(var i = 0;i <= 20 ; i ++)
+          tr
+            td= morosos[i].ide
+            td= morosos[i].nombre
+            td= morosos[i].montoMoroso
+            td= morosos[i].QRecibosMorosos
+      
+  

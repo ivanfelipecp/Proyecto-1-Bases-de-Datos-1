@@ -1,0 +1,29 @@
+extends ../layout.jade
+block content 
+  form(class="top-space" method="post" action="/user/consultar") 
+    div(class="form-group")
+      input(name="recibo" placeholder="Digite el número del recibo" class="form-control medium-input" type="number")
+    div(class="form-group text-center")
+      input(type="submit" class="btn btn-info" value="Consultar")
+  if recibo < 0
+    h1 No existe el recibo que está buscando
+  else if recibo != 'null' && recibo != 0
+    table(class="table mini-top-space" style="width:80%")
+      caption(class="no-float dark-blue center") Recibo
+      thead
+        tr
+          th Número de Recibo
+          th Fecha emisión
+          th Fecha límite
+          th Estado 
+          th Total Pagado
+      tbody
+          td= recibo.id
+          td= recibo.mesAnno
+          td= recibo.fechaLimite
+          if recibo.estado == 1
+            td Pagado 
+          else 
+            td Sin pagar 
+          td= recibo.totalAPagar
+    
